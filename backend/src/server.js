@@ -13,8 +13,11 @@ const PORT = process.env.PORT || 5001;
 
 // ✅ CORS
 app.use(cors({
-    origin: "http://localhost:5173",
-    credentials: true
+  origin: [
+    "http://localhost:5173",
+    "https://funny-kashata-554c5a.netlify.app"
+  ],
+  credentials: true
 }));
 
 // ✅ Middlewares
